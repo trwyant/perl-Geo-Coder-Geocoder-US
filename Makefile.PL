@@ -22,7 +22,7 @@ my %args = (
     ABSTRACT => 'Geocode addresses using geocoder.us',
 );
 
-$mmv >= 6.31 and $args{LICENSE} => 'perl';
+$mmv >= 6.31 and $args{LICENSE} = 'perl';
 
 if ( $mmv >= 6.4501 ) {
     $args{META_ADD} = {
