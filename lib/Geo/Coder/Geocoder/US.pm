@@ -10,7 +10,7 @@ use LWP::UserAgent;
 use Text::CSV;
 use URI::Escape qw{ uri_escape };
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 {
 

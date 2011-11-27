@@ -1,3 +1,7 @@
+0.002		T. R. Wyant	26-Nov-2011
+  Fix syntax error in Makefile.PL.
+  Correct address in LICENSES/Copying (GNU GPL 1.0).
+
 0.001		T. R. Wyant	19-Nov-2011
   Initial production release to CPAN. No changes since 0.000_01.
 
