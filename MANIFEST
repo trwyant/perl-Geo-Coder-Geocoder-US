@@ -12,6 +12,7 @@ MANIFEST			This list of files
 README
 t/basic.t
 t/geocode.t
+xt/author/changes.t
 xt/author/critic.t
 xt/author/executable.t
 xt/author/kwalitee.t
