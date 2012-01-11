@@ -284,7 +284,7 @@ Geo::Coder::Geocoder::US - Geocode a location using L<http://geocoder.us/>
 =head1 SYNOPSIS
 
  use Geo::Coder::Geocoder::US;
- use YAML;
+ use YAML::Any;
  
  my $gc = Geo::Coder::Geocoder::US->new();
  foreach my $loc ( @ARGV ) {
