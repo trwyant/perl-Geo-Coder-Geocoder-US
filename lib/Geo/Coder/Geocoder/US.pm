@@ -64,7 +64,7 @@ sub debug {
     use constant DELAY => 15;
 
     my $wait_for = time - DELAY;
-    my %valid_arg = map { $_ => 1 } qw{ location };
+##  my %valid_arg = map { $_ => 1 } qw{ location };
 
     sub geocode {
 	my ( $self, @args ) = @_;
