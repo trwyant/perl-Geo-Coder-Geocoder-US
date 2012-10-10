@@ -80,11 +80,9 @@ sub debug {
 #	$parm{location} = uri_escape( $parm{location} );
 
 	my $now = time;
-	{
-	    $wait_for <= $now and last;
+	while ( $wait_for > $now ) {
 	    sleep $wait_for - $now;
 	    $now = time;
-	    redo;
 	}
 	$wait_for = $now + DELAY;
 
