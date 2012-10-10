@@ -8,7 +8,8 @@ use warnings;
 use Carp;
 use LWP::UserAgent;
 use Text::CSV;
-use URI::Escape qw{ uri_escape };
+use URI;
+# use URI::Escape qw{ uri_escape };
 
 our $VERSION = '0.003';
 
@@ -71,7 +72,12 @@ sub debug {
 	my %parm = @args % 2 ? ( location => @args ) : @args;
 	defined $parm{location}
 	    or croak "You must provide a location to geocode";
-	$parm{location} = uri_escape( $parm{location} );
+
+	my $uri = URI->new( BASE_URL );
+	$uri->path_segments( service => $self->{interface} );
+	$uri->query_form( address => $parm{location} );
+
+#	$parm{location} = uri_escape( $parm{location} );
 
 	my $now = time;
 	{
@@ -82,11 +88,12 @@ sub debug {
 	}
 	$wait_for = $now + DELAY;
 
-	my $rslt = $self->{response} = $self->{ua}->get(
-	    BASE_URL. 'service/' . $self->{interface} .
-	    '?address=' .
-	    $parm{location}
-	);
+#	my $rslt = $self->{response} = $self->{ua}->get(
+#	    BASE_URL. 'service/' . $self->{interface} .
+#	    '?address=' .
+#	    $parm{location}
+#	);
+	my $rslt = $self->{response} = $self->{ua}->get( $uri );
 	$rslt->is_success()
 	    or return;
 

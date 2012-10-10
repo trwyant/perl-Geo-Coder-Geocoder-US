@@ -37,7 +37,8 @@ sub requires {
 	'LWP::UserAgent'	=> 0,
 	strict			=> 0,
 	'Text::CSV'		=> 0,
-	'URI::Escape'		=> 0,
+#	'URI::Escape'		=> 0,
+	'URI'			=> 0,
 	warnings		=> 0,
 	@extra,
     };
