@@ -16,12 +16,15 @@ my %opt;
 
 GetOptions( \%opt,
 ##  qw{ interface=s },
+    qw{ debug! },
     help => sub { pod2usage( { -verbose => 2 } ) },
 )
     and @ARGV
     or pod2usage( { -verbose => 0 } );
 
 my $gc = Geo::Coder::Geocoder::US->new();
+defined $opt{debug}
+    and $gc->debug( $opt{debug} );
 ## defined $opt{interface}
 ##     and $gc->interface( $opt{interface} );
 
@@ -48,6 +51,11 @@ geocode-us - Use L<Geo::Coder::Geocoder::US|Geo::Coder::Geocoder::US> to geocode
  geocode-us -version
 
 =head1 OPTIONS
+
+=head2 -debug
+
+This option sets the C<debug> attribute of the object. The author makes
+no commitment as to what will happen if you assert this option.
 
 =head2 -help
 
