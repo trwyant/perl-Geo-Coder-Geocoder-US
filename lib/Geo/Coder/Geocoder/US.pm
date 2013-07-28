@@ -11,7 +11,7 @@ use Text::CSV;
 use URI;
 # use URI::Escape qw{ uri_escape };
 
-our $VERSION = '0.003';
+our $VERSION = '0.004';
 
 {
 
