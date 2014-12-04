@@ -1,3 +1,6 @@
+0.004_01	2014-12-03	T. R. Wyant
+  Tweak author tests.
+
 0.004		2013-07-28	T. R. Wyant
   Recode delay loop in terms of while(), rather than a single-iteration
     loop with 'last' and 'redo'.
