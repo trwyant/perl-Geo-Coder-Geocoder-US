@@ -2,9 +2,12 @@
 /Build
 /foo
 /Makefile
+/meta
 /META.yml
 /MYMETA.yml
 /_build
 /META.json
 /MYMETA.json
 /pm_to_blib
+/TODO
+.*.swp
