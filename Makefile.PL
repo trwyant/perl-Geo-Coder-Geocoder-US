@@ -12,6 +12,8 @@ use My::Module::Meta;
 
 my $meta = My::Module::Meta->new();
 
+$meta->notice();
+
 my %args = (
     NAME => 'Geo::Coder::Geocoder::US',
     VERSION_FROM => 'lib/Geo/Coder/Geocoder/US.pm',

@@ -51,6 +51,23 @@ sub meta_merge {
     };
 }
 
+sub notice {
+    warn <<"EOD";
+
+>>>> NOTICE <<<<\a\a\a
+
+The web site that this module in a front-end to, http://geocoder.us/,
+disappeared in late 2015. Without the web site, this module does
+nothing. If the web site or a reasonable facsimile does not reappear by
+mid-2016, this module WILL BE RETRACTED.
+
+EOD
+
+    sleep 6;
+
+    return;
+}
+
 sub requires {
     my ( $self, @extra ) = @_;
 ##  if ( ! $self->distribution() ) {
@@ -134,6 +151,12 @@ C<MAKING_MODULE_DISTRIBUTION> at the time the object was instantiated.
 This method returns a reference to a hash describing the meta-data which
 has to be provided by making use of the builder's C<meta_merge>
 functionality. This includes the C<no_index> and C<resources> data.
+
+=head2 notice
+
+ $meta->notice();
+
+This method displays the pending-retraction notice.
 
 =head2 requires
 

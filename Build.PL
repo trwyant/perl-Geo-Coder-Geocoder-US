@@ -13,6 +13,8 @@ use My::Module::Meta;
 
 my $meta = My::Module::Meta->new();
 
+$meta->notice();
+
 my %args = (
     dist_author => 'Tom Wyant (wyant at cpan dot org)',
     dist_abstract => 'Geocode addresses using geocoder.us',
