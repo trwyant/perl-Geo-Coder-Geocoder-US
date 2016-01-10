@@ -1,3 +1,12 @@
+0.006		2016-01-10	T. R. Wyant
+  Add pending retraction notice: The web site that this module in a
+    front-end to, http://geocoder.us/, disappeared in late 2015. Without
+    the web site, this module does nothing. If the web site or a
+    reasonable facsimile does not reappear by mid-2016, this module WILL
+    BE RETRACTED.
+
+  Add GitHub repository to metadata.
+
 0.005		2014-12-12	T. R. Wyant
   No changes since 0.004_01.
 
