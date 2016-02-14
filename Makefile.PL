@@ -22,6 +22,7 @@ my %args = (
     'dist' => {COMPRESS => 'gzip', SUFFIX => 'gz'},
     AUTHOR => 'Tom Wyant (wyant at cpan dot org)',
     ABSTRACT => 'Geocode addresses using geocoder.us',
+    realclean	=> { FILES => 'cover_db' },
 );
 
 $mmv >= 6.31 and $args{LICENSE} = 'perl';
@@ -38,3 +39,25 @@ $mmv >= 6.5501
 
 WriteMakefile (%args);
 
+sub MY::postamble {
+    my ( $self, @args ) = @_;
+
+    my $authortest = $self->test_via_harness(
+	'$(FULLPERLRUN)', '$(AUTHORTEST_FILES)' );
+    $authortest =~ s/ \s+ \z //smx;
+    $authortest =~ s/ \A \s+ //smx;
+    chomp $authortest;
+
+    return <<"EOD";
+
+AUTHORTEST_FILES = t/*.t xt/author/*.t
+
+authortest :: pure_all
+	AUTHOR_TESTING=1 $authortest
+
+testcover :: pure_all
+	cover -test
+EOD
+}
+
+# ex: set textwidth=72 :
