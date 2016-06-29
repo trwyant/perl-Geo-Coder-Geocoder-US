@@ -1,3 +1,9 @@
+0.006_01	2016-06-29	T. R. Wyant
+  Add deprecation notice to documentation and metadata. No functional
+    changes.
+
+  Add Makefile targets authortest, testcover
+
 0.006		2016-01-10	T. R. Wyant
   Add pending retraction notice: The web site that this module in a
     front-end to, http://geocoder.us/, disappeared in late 2015. Without
