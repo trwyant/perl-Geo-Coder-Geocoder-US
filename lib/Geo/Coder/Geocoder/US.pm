@@ -302,6 +302,8 @@ Geo::Coder::Geocoder::US - Geocode a location using L<http://geocoder.us/>
 
 =head1 SYNOPSIS
 
+ # (DEPRECATED)
+ 
  use Geo::Coder::Geocoder::US;
  use YAML;
  
@@ -314,7 +316,33 @@ Geo::Coder::Geocoder::US - Geocode a location using L<http://geocoder.us/>
      }
  }
 
+=head1 DEPRECATION NOTICE
+
+This perl module makes use of the L<http://geocoder.us/> API to geocode
+addresses in the United States of America. This web site disappeared
+late in 2015, and has not been seen since. Without the underlying web
+site, B<this code does nothing, and does it slowly since the query must
+time out.>
+
+Consequently, I am putting this module through a deprecation cycle.
+Currently, the installer warns when you install this module.  Beginning
+with the first release of 2017, the first call to L<new()|/new> will
+produce a warning (i.e. C<Carp::carp()>.) With the first release on or
+after July 1 2017, every call to L<new()|/new> will warn with stack
+trace (i.e.  C<Carp::cluck()>,) and it will warn when loaded. With the
+first release of 2018, loading this module will produce a fatal error.
+On or after the first of July 2018 I will delete this module from CPAN.
+It will still be available via BackPAN
+(L<http://backpan.perl.org/authors/id/W/WY/WYANT/>) or GitHub
+(L<https://github.com/trwyant/perl-Geo-Coder-Geocoder-US>.)
+
+If you are looking for a Perl geocoding module that does not need a
+product key, you might try L<Geo::Coder::OSM|Geo::Coder::OSM>.
+
 =head1 DESCRIPTION
+
+B<This module is DEPRECATED.> See the
+L<DEPRECATION NOTICE|/DEPRECATION NOTICE> above.
 
 This package geocodes addresses by looking them up on the
 L<http://geocoder.us/> website. Because this site throttles access, this
@@ -393,16 +421,16 @@ L<LWP::UserAgent|LWP::UserAgent> (or one of its subclasses).
 =head1 SEE ALSO
 
 The C<Geo-Coder-US> distribution by Schuyler Erle and Jo Walsh (see
-L<http://search.cpan.org/dist/Geo-Coder-US/>) geocodes U.S. addresses
+L<https://metacpan.org/release/Geo-Coder-US>) geocodes U.S. addresses
 directly from the TIGER/Line database. I believe this underlies
 L<http://geocode.us/>. You should prefer C<Geo-Coder-US> over this
 package for bulk or otherwise serious geocoding.
 
-The C<Geo-Coder-TomTom> distribution by gray (see
-L<http://search.cpan.org/dist/Geo-Coder-TomTom>) uses the undocumented
-REST interface to the TomTom route planner. It seems to offer coverage
-in the U.S. approximately equivalent to this package, but without the
-enforced delay between queries.
+The C<Geo-Coder-OSM> distribution by gray (see
+L<https://metacpan.org/release/Geo-Coder-OSM>) uses the Open Street Map
+API, and offers global coverage. Within the USA it seems to be more
+finicky about specifying addresses than C<geocoder.us>, and tends to
+return multiple hits with a relevancy score.
 
 =head1 SUPPORT
 

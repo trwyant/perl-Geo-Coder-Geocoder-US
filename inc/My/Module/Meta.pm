@@ -47,7 +47,8 @@ sub meta_merge {
 		url	=> 'git://github.com/trwyant/perl-Geo-Coder-Geocoder-US.git',
 		web	=> 'https://github.com/trwyant/perl-Geo-Coder-Geocoder-US',
 	    },
-	}
+	},
+	x_deprecated	=> 1,
     };
 }
 
@@ -58,8 +59,9 @@ sub notice {
 
 The web site that this module in a front-end to, http://geocoder.us/,
 disappeared in late 2015. Without the web site, this module does
-nothing. If the web site or a reasonable facsimile does not reappear by
-mid-2016, this module WILL BE RETRACTED.
+nothing. Because this web site or a readonable facsimile has not not
+reappeared by mid-2016, this module IS BEING RETRACTED. See the POD for
+the detailed plan.
 
 EOD
 
