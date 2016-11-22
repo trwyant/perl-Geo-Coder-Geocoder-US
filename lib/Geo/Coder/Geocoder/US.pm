@@ -325,14 +325,15 @@ site, B<this code does nothing, and does it slowly since the query must
 time out.>
 
 Consequently, I am putting this module through a deprecation cycle.
-Currently, the installer warns when you install this module.  Beginning
-with the first release of 2017, the first call to L<new()|/new> will
-produce a warning (i.e. C<Carp::carp()>.) With the first release on or
-after July 1 2017, every call to L<new()|/new> will warn with stack
-trace (i.e.  C<Carp::cluck()>,) and it will warn when loaded. With the
-first release of 2018, loading this module will produce a fatal error.
-On or after the first of July 2018 I will delete this module from CPAN.
-It will still be available via BackPAN
+Currently, the installer warns when you install this module. Beginning
+with the first release after June 1 2017, the first call to
+L<new()|/new> will produce a warning (i.e. C<Carp::carp()>.) With the
+first release on or after December 1 2017, every call to L<new()|/new>
+will warn with stack trace (i.e.  C<Carp::cluck()>,) and it will warn
+when loaded. With the first release after June 1 2018, loading this
+module will produce a fatal error.  On or after the first of December
+2018 I will delete this module from CPAN.  It will still be available
+via BackPAN
 (L<http://backpan.perl.org/authors/id/W/WY/WYANT/>) or GitHub
 (L<https://github.com/trwyant/perl-Geo-Coder-Geocoder-US>.)
 
