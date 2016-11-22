@@ -1,3 +1,10 @@
+0.007		2016-11-22	T. R. Wyant
+  Update deprecation schedule.
+    It was my intent to take a step every six months, but somehow I
+    overlooked the need to do this.
+
+    Add xt/author/minimum_perl.t
+
 0.006_01	2016-06-29	T. R. Wyant
   Add deprecation notice to documentation and metadata. No functional
     changes.
