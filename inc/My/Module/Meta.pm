@@ -60,7 +60,7 @@ sub notice {
 The web site that this module in a front-end to, http://geocoder.us/,
 disappeared in late 2015. Without the web site, this module does
 nothing. Because this web site or a readonable facsimile has not not
-reappeared by mid-2016, this module IS BEING RETRACTED. See the POD for
+reappeared by mid-2016, this module HAS BEEN RETRACTED. See the POD for
 the detailed plan.
 
 EOD
