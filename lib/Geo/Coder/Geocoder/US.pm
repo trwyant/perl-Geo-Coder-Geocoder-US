@@ -14,9 +14,9 @@ use URI;
 our $VERSION = '0.009';
 
 use constant RETRACTION_MESSAGE =>
-	'Geo::Coder::Geocoder::US is being retracted, because the underlying web site no longer exists';
+	'Geo::Coder::Geocoder::US has been retracted, because the underlying web site no longer exists';
 
-Carp::cluck( RETRACTION_MESSAGE );
+Carp::confess( RETRACTION_MESSAGE );
 {
 
 ##  my %valid_arg = map { $_ => 1 } qw{ debug interface ua };
