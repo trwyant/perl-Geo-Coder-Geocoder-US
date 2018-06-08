@@ -11,7 +11,7 @@ use Text::CSV;
 use URI;
 # use URI::Escape qw{ uri_escape };
 
-our $VERSION = '0.009_01';
+our $VERSION = '0.010';
 
 use constant RETRACTION_MESSAGE =>
 	'Geo::Coder::Geocoder::US has been retracted, because the underlying web site no longer exists';
